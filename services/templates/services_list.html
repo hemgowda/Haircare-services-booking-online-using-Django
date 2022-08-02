@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>services INfo</h1>
+  {% if services_list %}
+  <table border>
+    {% for services in services_list %}
+      <tr>
+       <td> {{ services.sp_name}}</td><td> {{ services.providing_services }}</td> <td>{{services.service_benifits}}</td><td>{{services.sp_phone}}</td>
+       </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no services .</p>
+  {% endif %}
+{% endblock %}

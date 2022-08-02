@@ -1,0 +1,14 @@
+{% block content %}
+  <h1>Customer Information</h1>
+  {% if customer_list %}
+  <table border>
+    {% for customer in customer_list %}
+      <tr>
+       <td> {{ customer.c_name}}</td><td> {{ customer.c_address}}</td> <td>{{customer.c_email}}</td><td>{{customer.phone}}</td>
+       </tr>
+    {% endfor %}
+    </table>
+  {% else %}
+    <p>There are no customer .</p>
+  {% endif %}
+{% endblock %}
